@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction of Purchasing</title>
+    <link rel ="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>Prediction of Purchasing</h1>
+    <form action="/predict" method="post">
+        <label for="gen">Gender:</label>
+        <select id="gen" name="gen" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>        
+        </select><br><br>
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age"><br><br>
+        <label for="est_sal">Estimated Salary:</label>
+        <input type="text" id="est_sal" name="est_sal"><br><br>
+        <button type = "submit">Predict</button>
+    </form>
+    <h2>Will the customer purchase? : </h2>
+    <h2>{{pred_res}}</h2>
+</body>
+</html>

@@ -6,8 +6,6 @@ import pandas as pd
 app=Flask(__name__)
 
 
-data=pd.read_csv(r"C:\Users\johne\OneDrive\Desktop\ICTAK data\Social_Network_Ads.csv")
-
 with open('model2.pkl','rb') as file:
     model=pickle.load(file)
 
